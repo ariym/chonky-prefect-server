@@ -1,14 +1,11 @@
 # base-express
 
-Starter boilerplate
+ExpressJS boilerplate.
 
 ## Getting started
 
 ```text
 npm i
-
-# creates .db file with the name in .env of the type in schema.prisma
-npx prisma migrate dev --name init
 
 cp env.template .env
 
@@ -27,8 +24,7 @@ docker run -p 3000:3000 -d base-express
 
 ## Made With
 
-* Typescript
+* tsx
+* pkgroll
 * Express
-* Prisma
-* dotenv
 * multer

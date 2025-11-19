@@ -1,24 +1,22 @@
 {
   "name": "base-express",
   "version": "0.0.1",
-  "description": "for trying out stuff that needs an express server.",
+  "description": "ExpressJS boilerplate.",
+  "author": "ariym",
+  "main": "dist/server.js",
   "scripts": {
     "start": "npm run dev",
-    "dev": "NODE_ENV='development' nodemon --watch './**/*.ts' --exec 'ts-node' server.ts",
-    "build": "tsc",
-    "prod": "node dist/index.js"
+    "dev": "tsx --watch --env-file=.env src/server.ts",
+    "build": "pkgroll --env-file=.env src/server.ts",
+    "prod": "npm run build && node --env-file=.env dist/server.js"
   },
-  "author": "Ari",
-  "license": "ISC",
   "devDependencies": {
     "@types/node": "^18.11.17",
-    "nodemon": "^2.0.20",
-    "prisma": "^4.10.1",
-    "ts-node": "^10.9.1",
+    "pkgroll": "^2.20.1",
+    "tsx": "^4.20.6",
     "typescript": "^4.9.3"
   },
   "dependencies": {
-    "@prisma/client": "^4.10.1",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",

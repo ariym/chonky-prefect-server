@@ -9,7 +9,6 @@ import { logger, errorHandler } from './middleware';
 // app.use(notFoundError); // throw error for routes not found in routes.ts
 
 // environment variables
-require('dotenv').config({path: __dirname + '/.env'});
 const {IP, PORT} = process.env;
 
 

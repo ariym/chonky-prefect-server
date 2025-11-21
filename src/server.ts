@@ -6,7 +6,6 @@ import routes from './routes';
 import { getTimestamp } from './util/getTimestamp';
 import { logger, errorHandler } from './middleware';
 
-// app.use(notFoundError); // throw error for routes not found in routes.ts
 
 // environment variables
 const {IP, PORT} = process.env;
@@ -36,7 +35,7 @@ app.use(errorHandler);
 process.on('unhandledRejection', (err: any, promise) => {
   console.log(`Error: ${err.message}`);
   // close server & exit process
-  app.close(() => process.exit(1));
+  // process.exit(1);
 });
 
 

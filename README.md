@@ -1,6 +1,6 @@
-# base-express
+# chonky-prefect-server
 
-ExpressJS boilerplate.
+ExpressJS backend for serving file system data to Chonky React frontend.
 
 ## Getting started
 
